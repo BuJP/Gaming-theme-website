@@ -1,0 +1,225 @@
+@font-face {
+    font-family: "Nexa";
+    src: url("font/Nexa/NexaHeavy.otf");
+  }
+  @font-face {
+    font-family: "NexaB";
+    src: url("font/Nexa/Nexa\ Bold.otf");
+  }
+@font-face{
+    font-family:"Primetime";
+    src:url("font/Primetime.ttf");
+}
+@font-face{
+    font-family:"Champion";
+    src:url("font/ChampionGothic-Heavyweight.ttf");
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: black;
+}
+
+/*------------------------------ NAVABAR */
+nav{
+    width: 100%;
+    position: fixed;
+    z-index: 8;
+
+    
+}
+.navbar{
+    
+    padding:35px 150px;
+    max-width: 100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    
+}
+.nav-logo{
+    font-family: "Primetime";
+    font-size: 29px;
+}
+.nav-logo span{
+    color: #f1552b;    
+}
+.navbar a{
+    text-decoration:none;
+    color:white;
+}
+.nav-link{
+    font-family:"Nexa";
+    font-size: 21px;
+    letter-spacing:1px;
+}
+.nav-link ul li{
+    display:inline;
+    margin-right: 100px;
+}
+.nav-link ul li:nth-child(1) a{
+    color: #f1552b; 
+    text-decoration:underline;
+    text-underline-offset: 5px;   
+}
+
+.nav-searchbox{
+    position:relative;
+}
+.nav-searchbox input{
+    outline: none;
+    color:#fff;
+    width: 159px;
+    height: 31px;
+    border-radius: 15px;
+    background-color: unset;
+    border: 2px solid #f1552b;
+    padding-left: 34px;
+    padding-right: 10px;
+}
+.nav-searchbox img{
+    position: absolute;
+    width: 28px;
+    left: 5px;
+    top:1px;
+}
+/*------------------------------FIN NAVBAR*/
+
+/*-------------------------------------------------- HEADER */
+header{
+    max-width: 100%;
+    max-height:100vh;
+    overflow: hidden;
+}
+.header{
+    position: absolute;
+    display: flex;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    justify-content:space-between;
+    overflow: hidden;
+}
+.header-g{
+    width: 30%;
+    height:100%;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    z-index: 2;
+    
+}
+.header-g h1{
+    font-size: 59px;
+    text-transform: uppercase;
+	background: linear-gradient(180deg, #e1e1e1 30%, #464646 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-family: "Champion";
+    transform: scale(1, 2.5);
+    line-height: 161px;
+    letter-spacing:2px
+}
+.header-g p{
+    font-size:33px;
+    font-family:"NexaB";
+    text-transform: uppercase;
+	background: linear-gradient(180deg, #e1e1e1 30%, #464646 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
+
+.header-btn{
+
+}
+.header-btn button{
+    margin-top: 75px;
+    font-family:"NexaB";
+    font-size: 15px;
+    background: linear-gradient(180deg, #e1e1e1 30%, #464646 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    width: 188px;
+    height: 61px;
+    border-radius: 30px;
+    filter: drop-shadow(0 0 13.5px #ff3c00);
+    background-color: unset;
+    border: 3px solid #f1552b;
+}
+
+
+
+.header-d{
+    
+    z-index: 2;
+    height:100%;
+    display: flex;
+    justify-content:flex-end;
+}
+.header-d img{
+    height:100%;
+}
+
+
+/*------------------------ RESPONSIVE */
+@media screen and (max-width: 1817px){
+    .header-g h1{font-size: 48px;}
+    .header-d{align-items: flex-end;    width: auto;}
+}
+@media screen and (max-width: 1728px){
+   
+    .header-d img{
+        height:90%;
+    }
+}
+
+@media screen and (max-width: 1679px){
+    .elipse{
+        transform:translateX(-236px);
+        
+        
+    }
+}
+@media screen and (max-width:1647px){
+    .header-d img{height:90%;
+        transform:translateX(75px);}
+}
+@media screen and (max-width:1568px){
+    .header-d{align-items: flex-end;    width: auto;}
+    .header-d img{
+        height:85%;
+        
+    }
+}
+@media screen and (max-width:1611px){
+    .header-g h1{font-size: 38px;}
+}
+@media screen and (max-width:1471px){
+    .header-g h1{font-size: 28px;}
+    .header-g p{font-size: 235x;}
+}
+
+@media screen and (max-width:1390px){
+    .header{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .header-g{
+        align-items:center;
+        height:50%;
+        width:100%;
+        padding:0;
+        
+        box-shadow: 0 0 13.5px #ff3c00;
+        
+    }
+    .header-d{
+        display:none;
+    }
+
+}
